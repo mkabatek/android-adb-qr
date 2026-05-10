@@ -17,10 +17,27 @@ Pair your Android phone to ADB over Wi-Fi by scanning a QR code — no USB cable
 - Android 11+ with **Wireless debugging** enabled in Developer options
 - Your Mac and phone on the **same Wi-Fi network**
 
-Install platform-tools on macOS:
+Install platform-tools:
 
+**macOS**
 ```sh
 brew install --cask android-platform-tools
+```
+
+**Windows**
+
+Download and extract the [Android platform-tools ZIP](https://developer.android.com/tools/releases/platform-tools) from Google, then add the extracted folder to your `PATH`, or run `adb` from that folder directly.
+
+**Linux**
+```sh
+# Debian/Ubuntu
+sudo apt install adb
+
+# Arch
+sudo pacman -S android-tools
+
+# Fedora
+sudo dnf install android-tools
 ```
 
 Python dependencies (`qrcode`, `zeroconf`) are installed automatically on first run if missing.
